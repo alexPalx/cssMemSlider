@@ -13,16 +13,17 @@ body {
 }
 
 .slider {
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     width: 50%;
-    max-height: 50%;
+    max-height: max-content;
     border-radius: 1%;
 }
 
 .image-block,
 .text-block {
+    transition: 0.5s;
     display: flex;
     width: 400%;
 }
@@ -30,6 +31,7 @@ body {
 .image,
 .text {
     width: 25%;
+    color: #eeeeee;
 }
 
 .slider-info {
@@ -48,10 +50,74 @@ body {
 }
 
 .text-block-wrapper {
-    width: 66%;
-    overflow: hidden;
+    width: 66.6%;
+    overflow-x: hidden;
 }
 
 .title__buttons {
     width: max-content;
+}
+
+.slider__radio {
+    display: none;
+}
+
+.slider__radio:checked:nth-of-type(1)~.image-block,
+.slider__radio:checked:nth-of-type(1)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(0);
+}
+
+.slider__radio:checked:nth-of-type(2)~.image-block,
+.slider__radio:checked:nth-of-type(2)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(-25%);
+}
+
+.slider__radio:checked:nth-of-type(3)~.image-block,
+.slider__radio:checked:nth-of-type(3)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(-50%);
+}
+
+.slider__radio:checked:nth-of-type(4)~.image-block,
+.slider__radio:checked:nth-of-type(4)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(-75%);
+}
+
+
+.slider__radio:checked:nth-of-type(1)~.slider-info>.slider__nav>.radiobutton:nth-child(1) {
+    background-color: #aaaaaa;
+}
+
+.slider__radio:checked:nth-of-type(2)~.slider-info>.slider__nav>.radiobutton:nth-child(2) {
+    background-color: #aaaaaa;
+}
+
+.slider__radio:checked:nth-of-type(3)~.slider-info>.slider__nav>.radiobutton:nth-child(3) {
+    background-color: #aaaaaa;
+}
+
+.slider__radio:checked:nth-of-type(4)~.slider-info>.slider__nav>.radiobutton:nth-child(4) {
+    background-color: #aaaaaa;
+}
+
+.slider__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3%;
+    margin: 2%;
+    width: 33.3%;
+}
+
+.radiobutton {
+    width: 10px;
+    height: 10px;
+    background-color: #eeeeee;
+    border-radius: 50%;
+}
+
+.radiobutton:hover {
+    background-color: #cccccc;
+}
+
+.radiobutton:active {
+    background-color: #aaaaaa;
 }
