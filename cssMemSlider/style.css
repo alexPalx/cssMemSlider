@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+/* font-family: 'Oleo Script Swash Caps', cursive; */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,6 +34,7 @@ body {
 .text {
     width: 25%;
     color: #eeeeee;
+    font: 400 20px/30px 'Oleo Script Swash Caps', cursive;
 }
 
 .slider-info {
