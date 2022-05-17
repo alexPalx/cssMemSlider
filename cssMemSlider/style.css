@@ -111,8 +111,8 @@ body {
 }
 
 .radiobutton {
-    width: 25px;
-    height: 25px;
+    width: 1.6rem;
+    height: 1.6rem;
     background-color: #eeeeee;
     border-radius: 50%;
     border: 5px solid #444444;
