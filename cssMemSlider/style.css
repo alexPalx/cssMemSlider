@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+/* font-family: 'Oleo Script Swash Caps', cursive; */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #444444;
+}
+
+.slider {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-height: max-content;
+    border-radius: 1%;
+}
+
+.image-block,
+.text-block {
+    transition: 0.5s;
+    display: flex;
+    width: 400%;
+}
+
+.image,
+.text {
+    width: 25%;
+    color: #eeeeee;
+    font: 400 20px/30px 'Oleo Script Swash Caps', cursive;
+}
+
+.slider-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-block {
+    margin: 2%;
+}
+
+.title__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 3%;
+}
+
+.text-block-wrapper {
+    width: 66.6%;
+    overflow-x: hidden;
+}
+
+.title__buttons {
+    width: max-content;
+}
+
+.slider__radio {
+    display: none;
+}
+
+/* refactor me */
+.slider__radio:checked:nth-of-type(1)~.image-block,
+.slider__radio:checked:nth-of-type(1)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(0);
+}
+
+.slider__radio:checked:nth-of-type(2)~.image-block,
+.slider__radio:checked:nth-of-type(2)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(-25%);
+}
+
+.slider__radio:checked:nth-of-type(3)~.image-block,
+.slider__radio:checked:nth-of-type(3)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(-50%);
+}
+
+.slider__radio:checked:nth-of-type(4)~.image-block,
+.slider__radio:checked:nth-of-type(4)~.slider-info>.text-block-wrapper>.text-block {
+    transform: translate(-75%);
+}
+
+.slider__radio:checked:nth-of-type(1)~.slider-info>.slider__nav>.radiobutton:nth-child(1) {
+    background-color: #aaaaaa;
+}
+
+.slider__radio:checked:nth-of-type(2)~.slider-info>.slider__nav>.radiobutton:nth-child(2) {
+    background-color: #aaaaaa;
+}
+
+.slider__radio:checked:nth-of-type(3)~.slider-info>.slider__nav>.radiobutton:nth-child(3) {
+    background-color: #aaaaaa;
+}
+
+.slider__radio:checked:nth-of-type(4)~.slider-info>.slider__nav>.radiobutton:nth-child(4) {
+    background-color: #aaaaaa;
+}
+
+.slider__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5%;
+    margin: 2%;
+    width: 33.3%;
+}
+
+.radiobutton {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    border: 5px solid #444444;
+    cursor: pointer;
+}
+
+.radiobutton:hover {
+    background-color: #cccccc;
+}
+
+.radiobutton:active {
+    background-color: #aaaaaa;
+}
+
+@media (max-width: 767px) {
+    .slider-info {
+        flex-direction: column-reverse;
+        margin: 5%;
+    }
+
+    .text-block-wrapper {
+        width: 100%;
+    }
+
+    .slider__nav {
+        gap: 2%;
+        width: 100%;
+        justify-content: center;
+    }
+}
