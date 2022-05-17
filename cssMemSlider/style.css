@@ -129,7 +129,8 @@ body {
 
 @media (max-width: 767px) {
     .slider-info {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        margin: 5%;
     }
 
     .text-block-wrapper {
